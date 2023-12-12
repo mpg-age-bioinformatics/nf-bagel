@@ -2,10 +2,7 @@
 
 Run the workflow:
 ```
-RELEASE=1.0.0
-nextflow runmpg-age-bioinformatics/nf-bagel -r ${RELEASE} -params-file ${PARAMS}  -entry images && \
-nextflow run mpg-age-bioinformatics/nf-bagel -r ${RELEASE} -params-file params.json -entry preprocess && \
-nextflow run mpg-age-bioinformatics/nf-bagel -r ${RELEASE} -params-file params.json && \
+nextflow run mpg-age-bioinformatics/nf-bagel -r 1.0.0 -params-file params.json
 ```
 
 ### `params.json`
@@ -22,7 +19,7 @@ nextflow run mpg-age-bioinformatics/nf-bagel -r ${RELEASE} -params-file params.j
 
   # bagel essential genes (within the bage image)
   "bagel_essential":"/bagel/CEGv2.txt",
-  
+
   # bagel nonessential genes (within the bage image)
   "bagel_nonessential":"/bagel/NEGv1.txt"
 }
