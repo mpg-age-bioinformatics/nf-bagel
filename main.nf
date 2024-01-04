@@ -49,7 +49,7 @@ process probagel {
   
   script:
     """
-    /bagel/BAGEL.py fc -i ${params.ouput_mageck_count}/counts.count.txt -o ${params.output_bagel}/${label} -c ${control}
+    /bagel/BAGEL.py fc -i ${params.output_mageck_count}/counts.count.txt -o ${params.output_bagel}/${label} -c ${control}
     /bagel/BAGEL.py bf -i ${params.output_bagel}/${label}.foldchange  -o ${params.output_bagel}/${label}.bf -e ${params.bagel_essential} -n ${params.bagel_nonessential} -c ${treatment}
     /bagel/BAGEL.py pr -i ${params.output_bagel}/${label}.bf -o ${params.output_bagel}/${label}.br -e ${params.bagel_essential} -n ${params.bagel_nonessential}
     """
