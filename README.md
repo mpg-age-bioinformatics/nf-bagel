@@ -4,6 +4,12 @@ Run the workflow:
 ```
 nextflow run mpg-age-bioinformatics/nf-bagel -r 1.0.0 -params-file params.json
 ```
+or
+```
+git clone https://github.com/mpg-age-bioinformatics/nf-bagel.git
+nextflow run nf-bagel -params-file params.json
+```
+
 
 ### `params.json`
 ```
